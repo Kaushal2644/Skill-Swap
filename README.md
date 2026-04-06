@@ -4,6 +4,8 @@ A full-stack MERN application where users can **exchange skills without any mone
 
 ---
 
+Live Project: https://skill-swap-blond.vercel.app/
+
 ## 🚀 Features
 
 * 🔐 User Authentication (Register/Login)
