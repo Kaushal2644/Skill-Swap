@@ -83,11 +83,11 @@ export default function Register() {
                   email,
                   password,
                   bio: location,
-                  skillsOfferd: skillsOffered.split(",").map((s) => s.trim()).filter(Boolean),
+                  skillsOffered: skillsOffered.split(",").map((s) => s.trim()).filter(Boolean),
                   skillsWanted: skillsWanted.split(",").map((s) => s.trim()).filter(Boolean),
                 });
-                toast.success("Account created! Please sign in.");
-                navigate("/");
+                toast.success("Account created! Welcome to SkillSwap 🎉");
+                navigate("/dashboard");
               } catch (err) {
                 toast.error(err.response?.data?.message || "Registration failed");
               } finally {

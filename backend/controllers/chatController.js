@@ -110,7 +110,7 @@ export const getConversations = async (req, res) => {
     // Populate user info
     const populated = await User.populate(conversations, {
       path: "_id",
-      select: "name email skillsOfferd",
+      select: "name email skillsOffered",
     });
 
     const result = populated.map((c) => ({
@@ -125,4 +125,4 @@ export const getConversations = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
-};
+}

@@ -11,7 +11,7 @@ export const updateProfile = async (req, res) => {
 
         user.name = req.body.name || user.name;
         user.bio = req.body.bio || user.bio;
-        user.skillsOfferd = req.body.skillsOfferd || user.skillsOfferd;
+        user.skillsOffered = req.body.skillsOffered || user.skillsOffered;
         user.skillsWanted = req.body.skillsWanted || user.skillsWanted;
 
         const updateUser = await user.save();
@@ -45,7 +45,7 @@ export const getUserById = async (req, res) => {
             return res.status(404).json({message: "User not found"});
         }
 
-        res.json();
+        res.json(user);
     } catch (error) {
         return res.status(500).json({message: error.message});
     }

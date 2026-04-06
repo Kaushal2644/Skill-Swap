@@ -41,11 +41,11 @@ export default function UserCard({ user }) {
       </div>
 
       {/* Skills Offered */}
-      {user.skillsOfferd?.length > 0 && (
+      {user.skillsOffered?.length > 0 && (
         <div>
           <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">Offering</p>
           <div className="flex flex-wrap gap-1.5">
-            {user.skillsOfferd.map((s) => (
+            {user.skillsOffered.map((s) => (
               <span key={s} className="px-2.5 py-1 rounded-full text-[11px] bg-purple-500/20 text-purple-300 border border-purple-500/30">{s}</span>
             ))}
           </div>

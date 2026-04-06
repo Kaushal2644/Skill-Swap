@@ -18,7 +18,7 @@ export default function BrowseUsers() {
   const filtered = users.filter(
     (u) =>
       u.name?.toLowerCase().includes(search.toLowerCase()) ||
-      u.skillsOfferd?.some((s) => s.toLowerCase().includes(search.toLowerCase())) ||
+      u.skillsOffered?.some((s) => s.toLowerCase().includes(search.toLowerCase())) ||
       u.skillsWanted?.some((s) => s.toLowerCase().includes(search.toLowerCase()))
   );
 

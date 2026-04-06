@@ -11,7 +11,7 @@ export default function Profile() {
   const [name, setName] = useState(user?.name || "");
   const [bio, setBio] = useState(user?.bio || "");
   const [skillsOffered, setSkillsOffered] = useState(
-    user?.skillsOfferd?.join(", ") || ""
+    user?.skillsOffered?.join(", ") || ""
   );
   const [skillsWanted, setSkillsWanted] = useState(
     user?.skillsWanted?.join(", ") || ""
@@ -32,7 +32,7 @@ export default function Profile() {
       const res = await API.put("/users/profile", {
         name,
         bio,
-        skillsOfferd: skillsOffered
+        skillsOffered: skillsOffered
           .split(",")
           .map((s) => s.trim())
           .filter(Boolean),
@@ -101,13 +101,13 @@ export default function Profile() {
               </div>
 
               {/* Skills Offered */}
-              {user?.skillsOfferd?.length > 0 && (
+              {user?.skillsOffered?.length > 0 && (
                 <div className="w-full text-left">
                   <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">
                     Offering
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {user.skillsOfferd.map((s) => (
+                    {user.skillsOffered.map((s) => (
                       <span
                         key={s}
                         className="px-3 py-1 rounded-full text-xs bg-purple-500/20 text-purple-300 border border-purple-500/30"

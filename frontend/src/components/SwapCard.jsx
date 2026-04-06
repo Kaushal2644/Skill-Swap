@@ -51,7 +51,7 @@ export default function SwapCard({ swap, type = "sent", onUpdate }) {
 
       {/* Skills preview */}
       <div className="flex flex-wrap gap-2 text-xs">
-        {other?.skillsOfferd?.map((s) => (
+        {other?.skillsOffered?.map((s) => (
           <span key={s} className="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">{s}</span>
         ))}
         {other?.skillsWanted?.map((s) => (
